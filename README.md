@@ -6,13 +6,13 @@
  * Get into a directory of your project
  * Run the container
 
- Example:
+Example:
 
- ```bash
- docker pull ...
- cd ${your_project_workdir}
- docker run --hostname=vandyhack -v .:/app/homedir -it adviser-cli:latest
- ```
+```bash
+docker pull  public.ecr.aws/h0v7t0b7/vandyhack/adviser-cli:latest
+cd ${your_project_workdir}
+docker run --hostname=vandyhack -v .:/app/homedir -it adviser-cli:latest
+```
 
 ## Download the CLI
 
