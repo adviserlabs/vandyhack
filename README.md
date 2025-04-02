@@ -11,12 +11,15 @@ Example:
 ```bash
 docker pull  public.ecr.aws/h0v7t0b7/vandyhack/adviser-cli:latest
 cd ${your_project_workdir}
-docker run --hostname=vandyhack -v .:/app/homedir -it adviser-cli:latest
+docker run  --hostname=vandyhack  --platform linux/arm64/v8  -v $PWD:/app/homedir  -it  public.ecr.aws/h0v7t0b7/vandyhack/adviser-cli:latest
 ```
 
 Once you're in the container, you will see that you're in `/app/homedir` which is the
 same directory you started the container from. So if you were in your project directory
 when you did your `docker run` all your project files will be there and available.
+
+Any edits or changes you make to the files will be reflected in the Adviser environment
+automatically. So feel free to make changes using your IDE or whatever.
 
 Login and do a cluster list.
 
