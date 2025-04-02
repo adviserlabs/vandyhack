@@ -11,7 +11,11 @@ Example:
 ```bash
 docker pull  public.ecr.aws/h0v7t0b7/vandyhack/adviser-cli:latest
 cd ${your_project_workdir}
-docker run  --hostname=vandyhack  --platform linux/arm64/v8  -v $PWD:/app/homedir  -it  public.ecr.aws/h0v7t0b7/vandyhack/adviser-cli:latest
+docker run \
+    --hostname=vandyhack  \
+    --platform linux/arm64/v8  \
+    -v $PWD:/app/homedir  -it \
+    public.ecr.aws/h0v7t0b7/vandyhack/adviser-cli:latest
 ```
 
 Once you're in the container, you will see that you're in `/app/homedir` which is the
